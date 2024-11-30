@@ -11,5 +11,6 @@ public class Main {
         System.out.println(Almanbek.get_info());
 
         Almanbek.buyMusic(APT);
+        Almanbek.buyMusic(APT);
     }
 }
