@@ -12,7 +12,6 @@ public class Main {
         User Kutman = new User("Kutmansher", "K-POP", 24);
 
         System.out.println(APT.get_info());
-
         System.out.println(Almanbek.get_info());
 
         Almanbek.buyMusic(APT);
