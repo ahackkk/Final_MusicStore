@@ -17,8 +17,10 @@ public class User {
     }
 
     public String get_info(){
-        return this.name + " Favorite Genre is " + this.favorite_genre + " and he/she has " + this.money + " soms";
+        return this.name + " Favorite Genre is " + this.favorite_genre;
     }
+
+
 
     public void buyMusic(Music music){
         if(this.musicExists(music)) {
