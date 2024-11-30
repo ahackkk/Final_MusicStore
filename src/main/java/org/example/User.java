@@ -53,7 +53,8 @@ public class User {
 
     public void listenMusic(Music music){
         if(this.musicExists(music)) {
-            System.out.println(this.name + " is listening to " + music + "♫⋆｡♪ ₊˚♬ ﾟ.♫⋆｡♪ ₊˚♬ ﾟ.");
+            music.views++;
+            System.out.println(this.name + " is listening to " + music + "  ♫⋆｡♪ ₊˚♬ ﾟ.♫⋆｡♪ ₊˚♬ ﾟ.");
         }
         else{
             System.out.println(this.name + " can't listen to " + music + " it's not in his playList");
