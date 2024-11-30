@@ -7,6 +7,7 @@ public class Music {
     String genre;
     Integer duration;
     double price;
+    Integer downloads;
 
 
     public Music(String name, String author, String genre, Integer duration, double price){
@@ -15,6 +16,7 @@ public class Music {
         this.genre = genre;
         this.duration = duration;
         this.price = price;
+        this.downloads = 0;
     }
 
     public String get_info(){
@@ -24,4 +26,5 @@ public class Music {
     public String toString(){
         return this.name + " by " + this.author + ". genre: " + this.genre + ". Costs " + this.price;
     }
+
 }
