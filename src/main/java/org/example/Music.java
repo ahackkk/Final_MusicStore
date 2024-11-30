@@ -27,4 +27,7 @@ public class Music {
         return this.name + " by " + this.author + ". genre: " + this.genre + ". Costs " + this.price;
     }
 
+    public void getDownloads(){
+        System.out.println(this.name + " was downloaded " + this.downloads + " times");
+    }
 }

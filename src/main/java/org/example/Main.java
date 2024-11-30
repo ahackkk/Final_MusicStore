@@ -17,5 +17,7 @@ public class Main {
         Almanbek.getPlayList();
 
         Almanbek.listenMusic(APT);
+
+        APT.getDownloads();
     }
 }
