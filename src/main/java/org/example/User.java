@@ -35,7 +35,7 @@ public class User {
             this.playList.add(music);
             this.money -= music.price;
             music.downloads ++;
-            System.out.println(this.name + " bought " + music.price);
+            System.out.println(this.name + " bought " + music);
         }
     }
 

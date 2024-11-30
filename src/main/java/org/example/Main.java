@@ -10,12 +10,14 @@ public class Main {
         User Almanbek = new User("Almanbek", "Rock", 3);
         User Aktan = new User("Aktan", "POP", 1000000);
         User Kutman = new User("Kutmansher", "K-POP", 24);
+        User Davlet = new User("Davlet Azimov", "Heavy Metal", 42000);
 
         System.out.println(APT.get_info());
         System.out.println(Almanbek.get_info());
 
         Almanbek.buyMusic(APT);
         Almanbek.buyMusic(APT);
+        Davlet.buyMusic(muras);
 
         Almanbek.getPlayList();
 
