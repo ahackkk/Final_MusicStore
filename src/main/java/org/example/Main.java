@@ -26,5 +26,7 @@ public class Main {
 
         APT.getStatistics();
 //        Bailando.openVideo();
+
+        Aktan.getBalance();
     }
 }

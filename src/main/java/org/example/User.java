@@ -20,7 +20,9 @@ public class User {
         return this.name + " Favorite Genre is " + this.favorite_genre;
     }
 
-
+    public void getBalance(){
+        System.out.println(this.name + " has " + this.money + " soms");
+    }
 
     public void buyMusic(Music music){
         if(this.musicExists(music)) {
