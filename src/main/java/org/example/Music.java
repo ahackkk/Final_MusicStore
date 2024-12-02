@@ -1,6 +1,9 @@
 package org.example;
+
 import java.awt.Desktop;
 import java.net.URI;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Music {
 
@@ -13,7 +16,10 @@ public class Music {
     Integer views;
     String url;
 
-    public Music(String name, String author, String genre, Integer duration, double price, String url){
+    // Статический список для хранения всех песен
+    private static List<Music> allMusic = new ArrayList<>();
+
+    public Music(String name, String author, String genre, Integer duration, double price, String url) {
         this.name = name;
         this.author = author;
         this.genre = genre;
@@ -22,21 +28,24 @@ public class Music {
         this.downloads = 0;
         this.views = 0;
         this.url = url;
+
+        // Добавляем созданную песню в список
+        allMusic.add(this);
     }
 
-    public String toString(){
+    public String toString() {
         return this.name + " by " + this.author;
     }
 
-    public String get_info(){
+    public String get_info() {
         return this.name + " by " + this.author + ". genre: " + this.genre + ". Costs " + this.price;
     }
 
-    public void getStatistics(){
+    public void getStatistics() {
         System.out.println(this.name + " was downloaded " + this.downloads + " times, and has " + this.views + " views");
     }
 
-    public void openVideo(){
+    public void openVideo() {
         try {
             if (Desktop.isDesktopSupported()) {
                 Desktop.getDesktop().browse(new URI(this.url));
@@ -46,5 +55,10 @@ public class Music {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    // Метод для получения списка всех песен
+    public static List<Music> getAllMusic() {
+        return allMusic;
     }
 }

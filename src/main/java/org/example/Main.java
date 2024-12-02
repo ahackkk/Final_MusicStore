@@ -11,22 +11,27 @@ public class Main {
         User Aktan = new User("Aktan", "POP", 1000000);
         User Kutman = new User("Kutmansher", "K-POP", 24);
 
-        System.out.println(APT.get_info());
+//        System.out.println(APT.get_info());
+//
+//        System.out.println(Almanbek.get_info());
+//
+//        Almanbek.buyMusic(APT);
+//        Almanbek.buyMusic(APT);
+//
+//        Almanbek.getPlayList();
+//
+//        Almanbek.listenMusic(APT);
+//        Almanbek.listenMusic(APT);
+//        Almanbek.listenMusic(APT);
+//
+//        APT.getStatistics();
+////        Bailando.openVideo();
+//
+//        Aktan.getBalance();
 
-        System.out.println(Almanbek.get_info());
-
-        Almanbek.buyMusic(APT);
-        Almanbek.buyMusic(APT);
-
-        Almanbek.getPlayList();
-
-        Almanbek.listenMusic(APT);
-        Almanbek.listenMusic(APT);
-        Almanbek.listenMusic(APT);
-
-        APT.getStatistics();
-//        Bailando.openVideo();
-
-        Aktan.getBalance();
+        System.out.println("All songs:");
+        for (Music music : Music.getAllMusic()) {
+            System.out.println(music.get_info());
+        }
     }
 }
