@@ -2,14 +2,14 @@ package org.example;
 
 import java.awt.Desktop;
 import java.net.URI;
-import java.util.ArrayList;
-import java.util.List;
+//import java.util.ArrayList;
+//import java.util.List;
 
 public class Music {
 
     String name;
-    String author;
-    String genre;
+    Author author;
+    Genre genre;
     Integer duration;
     double price;
     Integer downloads;
@@ -17,9 +17,9 @@ public class Music {
     String url;
 
     // Статический список для хранения всех песен
-    private static List<Music> allMusic = new ArrayList<>();
+//    private static List<Music> allMusic = new ArrayList<>();
 
-    public Music(String name, String author, String genre, Integer duration, double price, String url) {
+    public Music(String name, Author author, Genre genre, Integer duration, double price, String url) {
         this.name = name;
         this.author = author;
         this.genre = genre;
@@ -29,8 +29,10 @@ public class Music {
         this.views = 0;
         this.url = url;
 
-        // Добавляем созданную песню в список
-        allMusic.add(this);
+        genre.quantity_music++;
+        author.quantity_music++;
+
+//        allMusic.add(this);
     }
 
     public String toString() {
@@ -57,8 +59,7 @@ public class Music {
         }
     }
 
-    // Метод для получения списка всех песен
-    public static List<Music> getAllMusic() {
-        return allMusic;
-    }
+//    public static List<Music> getAllMusic() {
+//        return allMusic;
+//    }
 }
